@@ -4,8 +4,6 @@ import ExpenseForm from './ExpenseForm';
 import { editExpense, removeExpense } from "../actions/expenses";
 
 const EditExpensePage = (props) => {
-    console.log(props);
-
     return (
         <div>
             <ExpenseForm
@@ -17,7 +15,6 @@ const EditExpensePage = (props) => {
             />
             <button
                 onClick={() => {
-                    console.log('props.expense.id', props.expense.id);
                     props.dispatch(removeExpense({ id: props.expense.id }));
                     props.history.push('/');
                 }}>
